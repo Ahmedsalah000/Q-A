@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import FormInput from './components/inputs';
-import QAList from './components/Q&A';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import apiClient from '../src/Api/apiClient'
-
+const FormInput = lazy(() => import('./components/inputs'));
+const QAList = lazy(() => import('./components/Q&A'));
 const App = () => {
     const [data, setData] = useState([]);
 
@@ -30,15 +30,6 @@ const App = () => {
         }
     };
 
-    // const deleteOneItem = async (ID) => {
-    //     try {
-    //         await axios.delete(`/api/questions/${ID}`);
-    //         setData(data.filter((item) => item.id !== ID));
-    //     } catch (error) {
-    //         console.error('Failed to delete question', error);
-    //     }
-    // };
-
     const notify = (message, type) => {
         if (type === "Error") toast.error(message);
         else if (type === "Success") toast.success(message);
@@ -46,7 +37,7 @@ const App = () => {
 
     return (
         <div className="font text-center color-body">
-            <Container className="p-5">
+            <Container className="p-3">
                 <div className="container">
                     <div className="animation-container">
                         <span className="letter" id="letter-m">M</span>
@@ -62,8 +53,14 @@ const App = () => {
                         </Col>
                     </Row>
                     <ToastContainer />
+
+
+
                 </div>
             </Container>
+            <div className="footer">
+                        made by <span class="heart">❤️</span> <span class="reem-kufi-fun"> أحمد  صلاح </span>
+                    </div>
         </div>
     );
 };
