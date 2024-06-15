@@ -8,6 +8,7 @@ This project is a MERN Stack Interview Q&A application that allows users to add,
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -79,6 +80,18 @@ This project is a MERN Stack Interview Q&A application that allows users to add,
   - Helmet
   - XSS-clean
   - Express-Mongo-Sanitize
+  ## Screenshots
+
+Here are some screenshots of the application:
+
+### mobile
+![mobile](./screenShots/iPhone-14-Pro-438x891.png)
+
+### iPad
+![iPad](./screenShots/iPad-Air-5-930x1291.png)
+
+### Macbook
+![Macbook](./screenShots/Macbook-Air-2011x1165.png)
 
 ## Contributing
 
